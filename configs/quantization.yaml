@@ -1,0 +1,19 @@
+# Quantization settings
+fp16:
+  enabled: true
+  description: "Standard 16-bit half-precision baseline"
+  bytes_per_dim: 2
+
+int8:
+  enabled: true
+  scheme: "symmetric_per_tensor" # or symmetric_per_channel
+  scale_clip_percentile: 99.9
+  compute_mode: "dequant" # "dequant" (dequantize to float) or "int_dot" (direct integer dot product)
+  bytes_per_dim: 1
+
+binary:
+  enabled: true
+  threshold: 0.0
+  packing: "uint8" # 128 dimensions packed into 16 bytes
+  scoring: "hamming_popcount"
+  bytes_per_dim: 0.125 # 1/8 byte per dimension (16 bytes per 128-dim vector)

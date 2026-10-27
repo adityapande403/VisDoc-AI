@@ -1,0 +1,19 @@
+# Ingestion and rendering configuration
+supported_formats:
+  - ".pdf"
+  - ".png"
+  - ".jpg"
+  - ".jpeg"
+  - ".tiff"
+
+rendering:
+  dpi: 150
+  max_dimension: 1536
+  color_mode: "RGB"
+  auto_rotate: true
+  extract_metadata: true
+
+storage:
+  cache_dir: "d:/Aditya/hf6/data/cache"
+  page_image_format: "png"
+  store_previews: true

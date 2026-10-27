@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visdoc"
+version = "0.1.0"
+description = "Multimodal Visual Document Retrieval with ColPali, ColQwen, and Late Interaction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "VisDoc AI Team" }
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "transformers>=4.45.0",
+    "accelerate>=0.26.0",
+    "peft>=0.10.0",
+    "safetensors>=0.4.0",
+    "pymupdf>=1.24.0",
+    "pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.3.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "rich>=13.0.0",
+    "tqdm>=4.65.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "reportlab>=4.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

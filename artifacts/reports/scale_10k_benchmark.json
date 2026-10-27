@@ -1,0 +1,38 @@
+{
+  "fp16": {
+    "format": "fp16",
+    "total_pages": 10000,
+    "total_vectors": 5000000,
+    "index_build_seconds": 3.957624673843384,
+    "embedding_memory_mb": 1220.703125,
+    "compression_ratio_vs_fp16": 1.0,
+    "mean_latency_ms": 2028.9032949949615,
+    "median_latency_ms": 2006.0680000169668,
+    "p95_latency_ms": 2135.904924967326,
+    "queries_per_second": 0.49287711369332826
+  },
+  "int8": {
+    "format": "int8",
+    "total_pages": 10000,
+    "total_vectors": 5000000,
+    "index_build_seconds": 6.310345411300659,
+    "embedding_memory_mb": 610.3515625,
+    "compression_ratio_vs_fp16": 2.0,
+    "mean_latency_ms": 3013.152015002561,
+    "median_latency_ms": 3011.445799987996,
+    "p95_latency_ms": 3083.474895049585,
+    "queries_per_second": 0.3318783768694624
+  },
+  "binary": {
+    "format": "binary",
+    "total_pages": 10000,
+    "total_vectors": 5000000,
+    "index_build_seconds": 5.153455018997192,
+    "embedding_memory_mb": 76.2939453125,
+    "compression_ratio_vs_fp16": 16.0,
+    "mean_latency_ms": 2770.0238300079945,
+    "median_latency_ms": 2745.0561500154436,
+    "p95_latency_ms": 2890.068430028623,
+    "queries_per_second": 0.36100772461481456
+  }
+}

@@ -1,0 +1,30 @@
+# Training configuration for ColBERT / ColQwen contrastive fine-tuning
+dataset_path: "d:/Aditya/hf6/data/datasets/retrieval_train.jsonl"
+val_dataset_path: "d:/Aditya/hf6/data/datasets/retrieval_val.jsonl"
+output_dir: "d:/Aditya/hf6/checkpoints/finetuned_colqwen"
+
+training_hyperparameters:
+  learning_rate: 1.0e-4
+  projection_learning_rate: 5.0e-4
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  num_epochs: 3
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  seed: 42
+  fp16: false
+  bf16: true
+
+loss:
+  type: "colbert_pairwise_negative_ce" # Pairwise negative cross-entropy with in-batch negatives
+  temperature: 0.02
+  in_batch_term_weight: 0.5
+  normalize_scores: true
+
+peft:
+  enabled: true
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: ["custom_text_proj"] # or attention down/gate/up projections

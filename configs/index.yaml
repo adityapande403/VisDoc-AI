@@ -1,0 +1,12 @@
+# Index configuration
+index_dir: "d:/Aditya/hf6/data/indexes"
+default_format: "fp16" # "fp16", "int8", "binary"
+batch_size: 16
+use_gpu_scoring: true
+
+retrieval:
+  top_k: 10
+  candidate_filtering:
+    enabled: true
+    min_candidates: 20
+    ratio: 0.1 # filter to top 10% candidates using pooled/mean similarity before exact MaxSim

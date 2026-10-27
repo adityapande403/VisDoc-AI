@@ -1,0 +1,13 @@
+# Model backend and embedding configuration
+model_name: "vidore/colqwen2.5-v0.2"
+base_model: "vidore/colqwen2.5-base"
+fallback_model: "vidore/colpali-v1.2"
+embedding_dim: 128
+max_query_length: 50
+device: "cuda" # Auto-falls back to cpu if cuda unavailable
+torch_dtype: "bfloat16" # "bfloat16", "float16", or "float32"
+hf_cache_dir: "d:/Aditya/hf6/.hf_cache"
+
+# Visual token handling
+mask_non_image_embeddings: false
+normalize_embeddings: true

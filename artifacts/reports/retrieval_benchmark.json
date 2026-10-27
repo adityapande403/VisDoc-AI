@@ -1,0 +1,101 @@
+{
+  "fp16": {
+    "format": "fp16",
+    "metrics": {
+      "ndcg@5": 0.5132314787418083,
+      "mrr@10": 0.4361111111111111,
+      "recall@1": 0.16666666666666666,
+      "recall@5": 0.8333333333333334,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "evaluated_queries": 6
+    },
+    "retention": 1.0,
+    "latency_stats": {
+      "mean_ms": 1.4175499964039773,
+      "median_ms": 1.396150008076802,
+      "p90_ms": 1.5272499877028167,
+      "p95_ms": 1.5332250040955842,
+      "p99_ms": 1.538005017209798
+    },
+    "memory_stats": {
+      "format": "fp16",
+      "total_pages": 6,
+      "total_vectors": 384,
+      "quantized_embedding_bytes": 98304,
+      "quantized_embedding_mb": 0.09375,
+      "summary_bytes": 3072,
+      "summary_mb": 0.0029296875,
+      "fp16_baseline_mb": 0.09375,
+      "compression_ratio_vs_fp16": 1.0,
+      "compression_ratio_vs_fp32": 2.0,
+      "device": "cuda"
+    }
+  },
+  "int8": {
+    "format": "int8",
+    "metrics": {
+      "ndcg@5": 0.5132314787418083,
+      "mrr@10": 0.4361111111111111,
+      "recall@1": 0.16666666666666666,
+      "recall@5": 0.8333333333333334,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "evaluated_queries": 6
+    },
+    "retention": 1.0,
+    "latency_stats": {
+      "mean_ms": 1.978349998050059,
+      "median_ms": 1.978349988348782,
+      "p90_ms": 2.0354499865788966,
+      "p95_ms": 2.036524980212562,
+      "p99_ms": 2.037384975119494
+    },
+    "memory_stats": {
+      "format": "int8",
+      "total_pages": 6,
+      "total_vectors": 384,
+      "quantized_embedding_bytes": 49152,
+      "quantized_embedding_mb": 0.046875,
+      "summary_bytes": 3072,
+      "summary_mb": 0.0029296875,
+      "fp16_baseline_mb": 0.09375,
+      "compression_ratio_vs_fp16": 2.0,
+      "compression_ratio_vs_fp32": 4.0,
+      "device": "cuda"
+    }
+  },
+  "binary": {
+    "format": "binary",
+    "metrics": {
+      "ndcg@5": 0.3747009872302213,
+      "mrr@10": 0.25555555555555554,
+      "recall@1": 0.0,
+      "recall@5": 0.8333333333333334,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "evaluated_queries": 6
+    },
+    "retention": 0.7300818495171112,
+    "latency_stats": {
+      "mean_ms": 1.8759666612216581,
+      "median_ms": 1.7842999659478664,
+      "p90_ms": 2.1018999977968633,
+      "p95_ms": 2.1988000080455095,
+      "p99_ms": 2.2763200162444264
+    },
+    "memory_stats": {
+      "format": "binary",
+      "total_pages": 6,
+      "total_vectors": 384,
+      "quantized_embedding_bytes": 6144,
+      "quantized_embedding_mb": 0.005859375,
+      "summary_bytes": 3072,
+      "summary_mb": 0.0029296875,
+      "fp16_baseline_mb": 0.09375,
+      "compression_ratio_vs_fp16": 16.0,
+      "compression_ratio_vs_fp32": 32.0,
+      "device": "cuda"
+    }
+  }
+}

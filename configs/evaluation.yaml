@@ -1,0 +1,15 @@
+# Evaluation configuration
+metrics:
+  - "ndcg@5"
+  - "mrr@10"
+  - "recall@1"
+  - "recall@5"
+  - "recall@10"
+  - "recall@20"
+
+benchmarking:
+  warmup_queries: 5
+  measure_latency: true
+  latency_percentiles: [50, 90, 95, 99]
+  measure_memory: true
+  target_retention: 0.96 # >96% NDCG@5 retention target
